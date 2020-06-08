@@ -1,0 +1,72 @@
+
+.main {
+display: flex;
+flex-direction: row;
+padding: 20px;
+/* width: 60%; */
+}
+body {
+    /* background: #white; */
+    font-family: 'Louis George Cafe', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* min-height: calc(100vh - 160px); */
+    /* padding: 20px; */
+    text-align: center;
+}
+
+.dark-mode {
+    background: black;
+    color: white;
+}
+
+button {
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    background: rgb(255, 115, 0);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+button:hover {
+    background: rgb(212, 24, 80);
+}
+
+ p {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.toggle {
+    align-self: center;
+}
+
+p {
+
+    font-family: fantasy;
+}
+
+.intro {
+    padding-right: 25px;
+}
+
+.person-image {
+    width: 350px;
+    height: 500px;
+}
+
+.frontend {
+    color: rgb(212, 24, 80);
+}
+
+.gif {
+    /* width: 300px; */
+    padding-top: 20px;
+}
