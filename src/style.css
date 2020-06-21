@@ -1,17 +1,27 @@
 
+
+@media only screen and (min-width: 700px) {
+#root {
+    width: 100%;
+}
+}
+
+
+
 .main {
 display: flex;
 flex-direction: row;
 padding: 20px;
+padding-top: 90px;
 /* width: 60%; */
 }
 body {
     /* background: #white; */
-    font-family: 'Louis George Cafe', sans-serif;
+    /* font-family: 'Louis George Cafe', sans-serif; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     width: 100%;
     /* min-height: calc(100vh - 160px); */
     /* padding: 20px; */
@@ -19,8 +29,12 @@ body {
 }
 
 .dark-mode {
-    background: black;
-    color: white;
+
+    background: linear-gradient( -45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    /* background: linear-gradient(-45deg, rgb(80, 105, 47), rgb(195, 141, 81)) scroll; */
+	background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    
 }
 
 button {
@@ -46,7 +60,18 @@ button:hover {
 }
 .toggle {
     align-self: center;
+
+    position: fixed;
+    top: 10px;
+    right: 0;
+    padding-right: 20px;
+    z-index: 2;
 }
+
+.toggle:hover {
+    cursor: pointer;
+}
+
 
 p {
 
@@ -58,15 +83,471 @@ p {
 }
 
 .person-image {
-    width: 350px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 699px) {
+    .person-image {
+        width: auto;
+        height: 300px;
+    }
 }
 
+
 .frontend {
-    color: rgb(212, 24, 80);
+    /* color: rgb(212, 24, 80); */
+    color: white;
 }
 
 .gif {
     /* width: 300px; */
     padding-top: 20px;
 }
+
+
+body {
+    background: rgb(21, 32, 43);
+
+   
+    color:  rgb(212, 24, 80);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+HTML CSS JSResult
+EDIT ON
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.theme-light {
+  --color-primary: #0060df;
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #000000;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #2a2c2d;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: var(--color-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h1 {
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('https://i.ibb.co/FxzBYR9/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.icon-container {
+    margin: 0.5rem 0 1rem 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+
+}
+.icon-cont {
+
+    padding: 5px;
+}
+
+.icon {
+    width: auto;
+    height: 40px;
+}
+
+@media only screen and (min-width: 700px) {
+.typewriter h2 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end) infinite,
+      blink-caret .5s step-end infinite;
+  }
+}
+  
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+  li:first-child {
+      position: absolute;
+      left: 10px;
+      top: -5px;
+  }
+
+
+  li:first-child:hover {
+
+    transform: scale(3.5);
+    cursor: pointer;
+}
+
+.footer-main{
+    color: white;
+    font-size: 22px;
+    padding-top: 30px;
+    background-color: #030303;
+}
+
+@media only screen and (max-width: 699px) {
+.footer-main{
+    padding: 30px 30px 0 30px;
+}
+}
+
+
+.copyrights {
+    text-align: left;
+    padding: 45px;
+    color: #767676;
+    font-size: 22px;
+    background-color: #030303;
+}
+
+.copyrights-name {
+    color: #6c5cff;
+}
+
+.go-to-top {
+    width: auto;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+}
+  
+
+@media only screen and (min-width: 600px) {
+    .toggle {
+        padding-right: 70px;
+    }
+    .go-to-top {
+        right: 70px;
+
+    width: auto;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    }
+}
+
+td:first-child {
+    display: flex;
+    /* align-content: center; */
+    justify-content: flex-start;
+    padding-left: 35px;
+    align-items: center;
+    text-align: left;
+}
+
+.flag {
+    width: 40px;
+    height: 40px;
+}
+
+thead {
+    background: #e2e5e9;
+    line-height: 3;
+}
+table {
+    padding: 0 35px;
+    color: black;
+}
+
+th:first-child {
+    text-align: left;
+    padding-left: 35px;
+}
+
+td > span {
+padding-left: 20px;
+color: black;
+font-weight: bold;
+}
+
+tr {
+    border-bottom: 1px solid #e2e5e9;
+    line-height: 3;
+}
+.countries-visited {
+
+    background: white;
+    color: black;
+}
+
+.countries-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.countries:hover {
+    cursor: pointer;
+    background: #e54783;
+    color: white;
+}
+
+.countries {
+
+    color: black;
+    display: flex;
+    /* align-content: center; */
+    justify-content: flex-start;
+    padding-left: 15px;
+    align-items: center;
+    text-align: left;
+    flex: 0 0 19%; /* explanation below */
+    margin: 5px;
+    width: 180px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+.nl {
+    background: aliceblue;
+}
+.country-name {
+
+padding-left: 10px;
+font-weight: bold;
+}
+.country-name:hover {
+
+    color: white;
+    }
+
+.india {
+    font-weight: bold;
+    background: #e2e5e9;
+    /* color:  rgb(212, 24, 80); */
+}
+tr:last-child {
+    background:#23a6d5;
+}
+
+
+.location {
+    position: relative;
+    top: 0%;
+    left: 32%;
+    width: 80px;
+    height: 80px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.about-me {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    padding-top: 95px;
+    /* width: 100%; */
+    height: 140vh;
+    scroll-snap-align: center;
+}
+.about-content {
+    font-size: 21px;
+    line-height: 1.7;
+    /* letter-spacing: -.2px; */
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+.about-header {
+    /* text-align: left; */
+    font-size: 25px;
+    padding-left: 30px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.timeline-header{
+
+    text-align: center;
+    font-size: 27px;
+    color: white;
+}
+
+
+.world {
+    width: 100%;
+    margin: 1px auto;
+    padding-top: 83px;
+}
+
+@media only screen and (max-width: 699px) {
+    .about-header {
+        text-align: center;
+        font-size: 48px;
+        color: white;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+    .timeline-header{
+
+        text-align: center;
+        font-size: 27px;
+        color: white;
+    }
+    .about-content {
+        font-size: 21px;
+        line-height: 1.7;
+
+    /* font-family: fantasy; */
+        /* letter-spacing: -.2px; */
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-me {
+        height: 174vh;
+
+    }
+    .world {
+        width: 90%;
+        margin: 1px auto;
+        padding-top: 0;
+    }
+    
+}
+
+.about-desc {
+    font-weight: bold;
+
+    /* background: linear-gradient( -45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    /* font-family: fantasy; */
+    color:  #ee7752;
+}
+
+

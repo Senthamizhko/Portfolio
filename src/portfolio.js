@@ -1,0 +1,35 @@
+import React from "react";
+import "./portfolio.css";
+const Portfolio = () => {
+
+    return (
+        <div className="container">
+            <nav className="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <section id="home">
+                <h1>Welcome To My Site</h1>
+                <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+            </section>
+            <section id="about">
+                <h1>About</h1>
+                <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+            </section>
+            <section id="service">
+                <h1>Service</h1>
+                <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+            </section>
+            <section id="contact">
+                <h1>Contact</h1>
+                <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+            </section>
+        </div>
+    );
+}
+
+export default Portfolio;

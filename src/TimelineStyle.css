@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
 
 * {
 	box-sizing: border-box;
@@ -23,6 +23,10 @@ h1 {
 
 .text {
     color: black;
+
+    font-family: fantasy;
+
+    font-weight: bold;
 }
 
 #app {
@@ -40,7 +44,10 @@ h1 {
 }
 
 .timeline-container::after {
-    background-color: rgb(212, 24, 80);
+    /* background-color: rgb(212, 24, 80); */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170);
+	/* background-size: 400% 400%; */
+	animation: gradient 15s ease infinite;
     content: '';
     position: absolute;
     left: calc(50% - 2px);
@@ -57,7 +64,7 @@ h1 {
     width: 50%;
 }
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(even) {
     align-self: flex-end;
     justify-content: flex-start;
     padding-left: 30px;
@@ -90,12 +97,12 @@ h1 {
     height: 15px;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content {
+.timeline-item:nth-child(even) .timeline-item-content {
     text-align: left;
     align-items: flex-start;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content::after {
+.timeline-item:nth-child(even) .timeline-item-content::after {
     right: auto;
     left: -7.5px;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -113,7 +120,7 @@ h1 {
     text-transform: uppercase;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content .tag {
+.timeline-item:nth-child(even) .timeline-item-content .tag {
     left: auto;
     right: 5px;
 }
@@ -138,7 +145,7 @@ h1 {
     font-weight: bold;
 }
 
-.timeline-item-content a::after {
+.timeline-item-content .anchor::after {
     content: ' ►';
     font-size: 12px;
 }
@@ -155,7 +162,7 @@ h1 {
     z-index: 100;
 }
 
-.timeline-item:nth-child(odd) .timeline-item-content .circle {
+.timeline-item:nth-child(even) .timeline-item-content .circle {
     right: auto;
     left: -40px;
 }
@@ -166,9 +173,16 @@ h1 {
     }
 }
 
+@media only screen and (max-width: 1023px) {
+    .timeline-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .timeline-item-content,
-    .timeline-item:nth-child(odd) .timeline-item-content {
+    .timeline-item:nth-child(even) .timeline-item-content {
         padding: 15px 10px;
         text-align: center;
         align-items: center;
@@ -215,4 +229,174 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+
+.gracenote {
+    width: auto;
+    height: 60px;
+}
+
+
+.gracenote:hover {
+
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 699px) {
+    .timeline-item:nth-child(even) {
+        align-self: flex-end;
+        justify-content: flex-start;
+        padding-left: 30px;
+        padding-right: 0;
+    }
+    .timeline-item:nth-child(even) .timeline-item-content .circle {
+        right: auto;
+        left: -40px;
+    }
+    .timeline-item:nth-child(even) .timeline-item-content {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-item-content::after {
+        right: auto;
+        left: -7.5px;
+        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    .gracenote {
+        width: auto;
+        height: 30px;
+    }
+    .timeline-item:nth-child(even) .timeline-item-content .tag {
+        left: auto;
+        right: 5px;
+    }
+    .timeline-container::after {
+        /* background-color: rgb(212, 24, 80); */
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170);
+        /* background-size: 400% 400%; */
+        animation: gradient 15s ease infinite;
+        content: '';
+        position: absolute;
+        left: calc(0.5% - 2px);
+        width: 4px;
+        height: 100%;
+    }
+
+    .timeline-item {
+        width: 99.5%;
+    }
+
+
+.timeline-item:nth-child() .timeline-item-content::after {
+    right: auto;
+    left: -7.5px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(even) .timeline-item-content .circle {
+    right: auto;
+    left: -40px;
+}
+
+.timeline-item-content .circle {
+    background-color: #fff;
+    border: 3px solid #222;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 10px);
+    /* right: -40px; */
+    right: auto;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+}
+.timeline-item:nth-child() .timeline-item-content {
+    text-align: left;
+    align-items: flex-start;
+}
+
+
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+}
+.timeline-item:nth-child(odd) .timeline-item-content .circle {
+    right: auto;
+    left: -40px;
+}
+.timeline-item:nth-child(odd) .timeline-item-content {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content::after {
+    right: auto;
+    left: -7.5px;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.gracenote {
+    width: auto;
+    height: 30px;
+}
+.timeline-item:nth-child(odd) .timeline-item-content .tag {
+    left: auto;
+    right: 5px;
+}
+.timeline-container::after {
+    /* background-color: rgb(212, 24, 80); */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170);
+    /* background-size: 400% 400%; */
+    animation: gradient 15s ease infinite;
+    content: '';
+    position: absolute;
+    left: calc(0.5% - 2px);
+    width: 4px;
+    height: 100%;
+}
+
+.timeline-item {
+    width: 99.5%;
+}
+
+
+.timeline-item:nth-child() .timeline-item-content::after {
+right: auto;
+left: -7.5px;
+box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .circle {
+right: auto;
+left: -40px;
+}
+
+.timeline-item-content .circle {
+background-color: #fff;
+border: 3px solid #222;
+border-radius: 50%;
+position: absolute;
+top: calc(50% - 10px);
+/* right: -40px; */
+right: auto;
+left: -40px;
+width: 20px;
+height: 20px;
+z-index: 100;
+}
+.timeline-item:nth-child() .timeline-item-content {
+text-align: left;
+align-items: flex-start;
+}
+}
+
+.title1{
+
+    padding-top: 10px;
 }
