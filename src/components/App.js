@@ -1,37 +1,45 @@
-import React from "react";
+import React, {useRef} from "react";
 import Timeline from "./Timeline";
-import Portfolio from "./portfolio";
 import Skills from "./Skills";
 import "./portfolio.css";
 const App = () => {
   function toggle(e) {
     document.body.classList.toggle("dark-mode");
   }
+  
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const timelineRef = useRef(null);
+  const skillsRef = useRef(null);
+  const countriesRef = useRef(null);
+  const onRefClick = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <React.Fragment>
       <nav className="navbar">
         <ul>
-          <li>
-            <a href="#home">
+          <li onClick={() => onRefClick(homeRef)}>
+            <a  href="#home">
               <img className="icon" src="./images/home.png" alt="html"></img>
             </a>
           </li>
-          <li>
+          <li onClick={() => onRefClick(aboutRef)} >
             <a href="#aboutme">About</a>
           </li>
-          <li>
+          <li  onClick={() => onRefClick(timelineRef)}>
             <a href="#about">Timeline</a>
           </li>
-          <li>
-            <a href="#service">Skills</a>
+          <li onClick={() => onRefClick(skillsRef)}>
+            <a  href="#service">Skills</a>
           </li>
-          <li>
-            <a href="#contact">Countries</a>
+          <li onClick={() => onRefClick(countriesRef)}>
+            <a  href="#contact">Countries</a>
           </li>
         </ul>
       </nav>
-      <section id="home" className="main frontend">
+      <section ref={homeRef}  className="main frontend">
         <div className="name-container">
           <img className="person-image" src="./Sentha.jpg" alt="sentha"></img>
           <div className="typewriter">
@@ -40,7 +48,7 @@ const App = () => {
             <h3>
               Passionate -
               <span
-                class="txt-rotate"
+                className="txt-rotate"
                 data-period="1000"
                 data-rotate='[ " Fullstack developer", " Coder", " Web developer", " Engineer" ]'
               ></span>
@@ -69,7 +77,7 @@ const App = () => {
                   >
                     <img
                       className="icon"
-                      src="./images/fb.webp"
+                      src="./images/fb.png"
                       alt="html"
                     ></img>
                   </a>
@@ -82,7 +90,7 @@ const App = () => {
                   >
                     <img
                       className="icon"
-                      src="./images/twitter.webp"
+                      src="./images/twitter.png"
                       alt="html"
                     ></img>
                   </a>
@@ -131,11 +139,8 @@ const App = () => {
             </div>
           </div>
         </div>
-        {/* <h2 className="frontend">Hi there! Welcome to my profile, I am a Front-end developer</h2> */}
-        {/* <h1 className="frontend">Hey! I’m Senthamizhko</h1> */}
-        {/* <h2>Front end developer</h2> */}
       </section>
-      <section id="aboutme" className="about-me">
+      <section ref={aboutRef} className="about-me">
         <h2 className="about-header">About me</h2>
         <div className="about-content">
           I’m a <span className="about-desc">Full stack developer</span> having
@@ -160,81 +165,15 @@ const App = () => {
           professionally and to keep me updated in the IT industry.
         </div>
       </section>
-      <section id="about">
+      <section ref={timelineRef}>
         <h4 className="timeline-header">Timeline</h4>
         <h2 className="about-header">Where I have been</h2>
         <Timeline />
       </section>
-      <section id="service">
+      <section ref={skillsRef}>
         <Skills />
       </section>
-      {/* <section id="about">
-        <h1>About</h1>
-        <p className="lead">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
-          quis!
-          </p>
-      </section> */}
-
-      {/* <button className="toggle" onClick={(e) => toggle(e)}>
-        Toggle theme
-              </button> */}
-
-      <div className="toggle">
-        <label id="switch" className="switch">
-          <input type="checkbox" onClick={(e) => toggle(e)} id="slider"></input>
-          <span className="slider round"></span>
-        </label>
-      </div>
-      {/* <section id="service">
-                <h1>Service</h1>
-                <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
-            </section> */}
-      {/* <section id="contact">
-        <h1>Contact</h1>
-        <p className="lead">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi,
-          quis!
-          </p>
-      </section> */}
-      {/* <div className="container">
-        <section className="main">
-          <div className="intro"> */}
-      {/* <h3>
-              I am basically from India and currently working as a senior
-              software engineer in Gracenote sports, a nielsen company in
-              Utrecht Netherlands
-            </h3>
-            <p>
-              I have overall 6 years of experience in development, maintenance
-              and implementation of Backoffice and batch applications in Banking
-              and Insurance domain. Sound knowledge in implementing Real time
-              web applications using ReactJS, React Hooks, Redux, ES6, HTML,
-              CSS, Webpack and developing Integration services and REST APIs
-              using NodeJS, ExpressJS, Socket.IO, MongoDB. Good working
-              knowledge on Git, Jira, confluence, CI/CD. Having knowledge on
-              Javascript testing framework- Jest, Enzyme Sound exposure and
-              experience in working with agile methodologies such as Scrum,
-              ScrumBan. Having basic understanding of Docker, Kubernetes, AWS
-              (IAM, S3, EC2, Lambda). Sound knowledge in implementing Mainframe
-              development using COBOL, DB2, JCL, VSAM. I am an enthusiastic
-              person who is always striving to learn new things and willing to
-              take up challenges which helps me to grow professionally and to
-              keep me updated in the IT industry.
-            </p> */}
-      {/* <div> */}
-      {/* <img className="gif" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8ac70e18142643.562da3d5a8622.gif" ></img> */}
-      {/* </div> */}
-      {/* </div> */}
-      {/* <div> */}
-      {/* <img className="person-image" src="./Sentha.jpg" alt="sentha" ></img> */}
-      {/* </div> */}
-      {/* </section> */}
-
-      {/* </div> */}
-
-      {/* <Portfolio /> */}
-      <section id="contact" className="countries-visited">
+      <section ref={countriesRef} className="countries-visited">
         <h2>Hobby: exploring the world</h2>
         <svg
           className="world"
@@ -244,7 +183,7 @@ const App = () => {
           height="400.649"
           viewBox="0 0 783.086 400.649"
           overflow="visible"
-          enable-background="new 0 0 783.086 400.649"
+          enableBackground="new 0 0 783.086 400.649"
           space="preserve"
         >
           <g>
@@ -764,185 +703,14 @@ const App = () => {
             <span className="country-name">India</span>
           </div>
         </div>
-        {/* <img className="location" src="./images/location.png" alt="html"></img> */}
-        {/* <table>
-          <thead>
-            <th>Countries visited</th>
-            <th>Cities visited</th>
-            <th>Year</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="900"
-                  height="600"
-                  viewBox="0 0 9 6"
-                >
-                  <rect fill="#21468B" width="9" height="6" />
-                  <rect fill="#FFF" width="9" height="4" />
-                  <rect fill="#AE1C28" width="9" height="2" />
-                </svg>
-                <span>Netherlands</span>
-              </td>
-              <td>
-                Den haag, Amsterdam, Utrecht, Rotterdam, Roermand, Delft, Leiden
-              </td>
-              <td>2019</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="450"
-                  height="300"
-                  viewBox="0 0 450 300"
-                >
-                  <rect width="450" height="300" fill="#ed2939" />
-                  <rect width="300" height="300" fill="#fae042" />
-                  <rect width="150" height="300" fill="#000" />
-                </svg>
-                <span>Belgium</span>
-              </td>
-              <td>Brussels, Bruge, Leuven, Dinant, Antwerpen, Ghent, Spa</td>
-              <td>2017, 2019</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1500"
-                  height="1000"
-                  viewBox="0 0 48 32"
-                >
-                  <rect fill="#D52B1E" height="32" width="48" />
-                  <rect fill="#fff" height="6" width="20" x="14" y="13" />
-                  <rect fill="#fff" height="20" width="6" x="21" y="6" />
-                </svg>
-                <span>Switzerland</span>
-              </td>
-              <td>
-                Luzern, Pilatus, Interlaken, Engelberg- Titlis, Grindelwald,
-                Thurn{" "}
-              </td>
-              <td>2019</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  width="900"
-                  height="600"
-                  viewBox="0 0 900 600"
-                >
-                  <rect width="900" height="600" fill="#ED2939" />
-                  <rect width="600" height="600" fill="#fff" />
-                  <rect width="300" height="600" fill="#002395" />
-                </svg>
-
-                <span>France</span>
-              </td>
-              <td>Paris</td>
-              <td>2017, 2019</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="900"
-                  height="600"
-                  viewBox="0 0 9 6"
-                >
-                  <desc>Flag of Germany, 2:3 aspect ratio</desc>
-                  <rect width="9" height="6" fill="#ffce00" />
-                  <rect width="9" height="4" fill="#dd0000" />
-                  <rect width="9" height="2" fill="black" />
-                </svg>
-                <span>Germany</span>
-              </td>
-              <td>Munich, Berlin, Munster</td>
-              <td>2017, 2019</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  id="Layer_1"
-                  height="300"
-                  viewBox="0 0 128 128"
-                  width="450"
-                  xmlns="http://www.w3.org/2000/svg"
-                  data-name="Layer 1"
-                >
-                  <path d="m12 27.751h104v72.497h-104z" fill="#f0f0f0" />
-                  <g fill="#d60a2e">
-                    <path d="m12 27.751h104v24.166h-104z" />
-                    <path d="m12 76.083h104v24.166h-104z" />
-                  </g>
-                </svg>
-                <span>Austria</span>
-              </td>
-              <td>Innsbrug</td>
-              <td>2017</td>
-            </tr>
-            <tr>
-              <td>
-                <svg
-                  className="flag"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 225 150"
-                  width="1350"
-                  height="900"
-                >
-                  <rect width="225" height="150" fill="#f93" />
-                  <rect width="225" height="50" y="50" fill="#fff" />
-                  <rect width="225" height="50" y="100" fill="#128807" />
-                  <g transform="translate(112.5,75)">
-                    <circle r="20" fill="#008" />
-                    <circle r="17.5" fill="#fff" />
-                    <circle r="3.5" fill="#008" />
-                    <g id="d">
-                      <g id="c">
-                        <g id="b">
-                          <g id="a">
-                            <circle
-                              r="0.875"
-                              fill="#008"
-                              transform="rotate(7.5) translate(17.5)"
-                            />
-                            <path
-                              fill="#008"
-                              d="M 0,17.5 0.6,7 C 0.6,7 0,2 0,2 0,2 -0.6,7 -0.6,7 L 0,17.5 z"
-                            />
-                          </g>
-                          <use href="#a" transform="rotate(15)" />
-                        </g>
-                        <use href="#b" transform="rotate(30)" />
-                      </g>
-                      <use href="#c" transform="rotate(60)" />
-                    </g>
-                    <use href="#d" transform="rotate(120)" />
-                    <use href="#d" transform="rotate(-120)" />
-                  </g>
-                </svg>
-                <span>India</span>
-              </td>
-              <td colSpan="2" className="india">
-                Nationality
-              </td>
-            </tr>
-          </tbody>
-        </table> */}
       </section>
+      
+      <div className="toggle">
+        <label id="switch" className="switch">
+          <input type="checkbox" onClick={(e) => toggle(e)} id="slider"></input>
+          <span className="slider round"></span>
+        </label>
+      </div>
       <div className="footer-main">
         <span>
           Feel free to drop an “Hi or Hello” back,
@@ -962,7 +730,7 @@ const App = () => {
           </a>{" "}
           using React.js.
         </span>
-        <a href="#home" aria-label="Go to the top of the page">
+        <a href="#home" onClick={() => onRefClick(homeRef)} aria-label="Go to the top of the page">
           <img className="go-to-top" src="./images/top.png" alt="html"></img>
         </a>
       </div>
