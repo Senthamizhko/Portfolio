@@ -39,8 +39,8 @@ const App = () => {
           </li>
         </ul>
       </nav>
-      <section ref={homeRef}  className="main frontend">
-        <div className="name-container">
+      <section ref={homeRef}  className="home-section">
+        <div>
           <img className="person-image" src="./Sentha.jpg" alt="sentha"></img>
           <div className="typewriter">
             <h1>Senthamizhko Arivannal</h1>
@@ -140,7 +140,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section ref={aboutRef} className="about-me">
+      <section ref={aboutRef} className="about-section">
         <h2 className="about-header">About me</h2>
         <div className="about-content">
           I’m a <span className="about-desc">Full stack developer</span> having
@@ -165,15 +165,15 @@ const App = () => {
           professionally and to keep me updated in the IT industry.
         </div>
       </section>
-      <section ref={timelineRef}>
+      <section ref={timelineRef} className="timeline-section">
         <h4 className="timeline-header">Timeline</h4>
         <h2 className="about-header">Where I have been</h2>
         <Timeline />
       </section>
-      <section ref={skillsRef}>
+      <section ref={skillsRef} className="skills-section">
         <Skills />
       </section>
-      <section ref={countriesRef} className="countries-visited">
+      <section ref={countriesRef} className="countries-section">
         <h2>Hobby: exploring the world</h2>
         <svg
           className="world"

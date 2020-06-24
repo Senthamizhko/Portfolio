@@ -35,7 +35,7 @@ const timelineData = [
   {
     title: "Programmer Analyst/Associate",
     text:
-      "Started working in Cogizant technology solution as a Programmer Analyst",
+      "Started working in Cognizant technology solution as a Programmer Analyst",
     date: "July 31st 2014",
     icon: "./images/cognizant.png",
     category: {
