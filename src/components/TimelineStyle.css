@@ -275,7 +275,7 @@ footer a {
     }
     .timeline-container::after {
         /* background-color: rgb(212, 24, 80); */
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170);
+        background: white;
         /* background-size: 400% 400%; */
         animation: gradient 15s ease infinite;
         content: '';
@@ -351,7 +351,7 @@ footer a {
 }
 .timeline-container::after {
     /* background-color: rgb(212, 24, 80); */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170);
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #378170); */
     /* background-size: 400% 400%; */
     animation: gradient 15s ease infinite;
     content: '';

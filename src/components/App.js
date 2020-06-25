@@ -1,15 +1,19 @@
 import React, {useRef} from "react";
 import Timeline from "./Timeline";
 import Skills from "./Skills";
+import App1 from "./Menu";
 import "./portfolio.css";
+import MediaQuery from 'react-responsive';
 const App = () => {
   function toggle(e) {
     document.body.classList.toggle("dark-mode");
+    document.body.classList.remove("add");
   }
   
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const timelineRef = useRef(null);
+  const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const countriesRef = useRef(null);
   const onRefClick = (ref) => {
@@ -18,11 +22,14 @@ const App = () => {
 
   return (
     <React.Fragment>
+      <MediaQuery maxWidth={699}>
+      <App1 onRefClick={onRefClick} homeRef={homeRef} aboutRef={aboutRef} timelineRef={timelineRef} projectsRef={projectsRef} skillsRef={skillsRef} countriesRef={countriesRef} />
+      </MediaQuery>
       <nav className="navbar">
         <ul>
           <li onClick={() => onRefClick(homeRef)}>
             <a  href="#home">
-              <img className="icon" src="./images/home.png" alt="html"></img>
+              <img src="./images/home.png" alt="html"></img>
             </a>
           </li>
           <li onClick={() => onRefClick(aboutRef)} >
@@ -30,6 +37,9 @@ const App = () => {
           </li>
           <li  onClick={() => onRefClick(timelineRef)}>
             <a href="#about">Timeline</a>
+          </li>
+          <li onClick={() => onRefClick(projectsRef)}>
+            <a  href="#project">Projects</a>
           </li>
           <li onClick={() => onRefClick(skillsRef)}>
             <a  href="#service">Skills</a>
@@ -143,8 +153,8 @@ const App = () => {
       <section ref={aboutRef} className="about-section">
         <h2 className="about-header">About me</h2>
         <div className="about-content">
-          I’m a <span className="about-desc">Full stack developer</span> having
-          6 years of experience in software development, currently working as a{" "}
+          I’m a <span className="about-desc add">Full stack developer</span> having
+          6 years of experience in software development, working as a{" "}
           <span className="about-desc">Senior software engineer</span> for
           Gracenote sports based in Utrecht, Netherlands. <br></br> I develop
           responsive(mobile/desktop/TV) sports widgets like(schedule day per
@@ -169,6 +179,32 @@ const App = () => {
         <h4 className="timeline-header">Timeline</h4>
         <h2 className="about-header">Where I have been</h2>
         <Timeline />
+      </section>
+      <section ref={projectsRef} >
+        <h1>Projects</h1>
+        <div className="project-section">
+          <ul><li>Gracenote</li><li>KBC</li></ul>
+        <div className="project1">
+          <h2 className="project1-header"> <img className="project-image" src="./images/gracenote.png" alt="html"></img>Gracenote Sports</h2>
+          <li>Developed
+          responsive sports widgets(mobile/tab/desktop) which provides sports functionalities like schedule day per
+          day, standings, match/ results detail, Athlete profile, Play by play
+          etc</li>
+          <li>Responsible for development of web application/pages for Tokyo olympics 2020 </li>
+          <li>Developed widgets to provide live scoring for major leagues like European leagues,
+            Premier leagues, NBA, NFL, PGA Tours and games like Soccer, Golf,
+            Basketball, Baseball, Cricket, Handball and almost every sports for
+            clients like NBC, CBC, Eurosports, Fifa, NOS.nl, Nu.nl, Telegraph</li>
+          <li>Developed a new set of responsive widgets, which are easy to implement and to
+customize. Our widgets are a fully hosted solution and can be implemented in any HTML page and used
+in all common environments</li>
+        </div>
+        <div className="project2">
+          <h2 className="project2-header"><img className="project-image" src="./images/kbc.png" alt="html"></img>KBC Bank</h2>
+              <li> Responsible for development, maintenance and implementation of Backoffice and batch applications in Banking and Insurance domain.</li>
+              <li>Developed customer end web applications using React and also worked on backend services using Mainframe</li>
+          </div>
+        </div>
       </section>
       <section ref={skillsRef} className="skills-section">
         <Skills />
@@ -566,7 +602,7 @@ const App = () => {
           </g>
         </svg>
         <div className="countries-div">
-          <h2>Countries visited</h2>
+          <h3>Countries visited</h3>
           <div className="countries nl">
             <svg
               className="flag"
@@ -728,7 +764,7 @@ const App = () => {
           >
             <span className="copyrights-name">Senthamizhko Arivannal</span>
           </a>{" "}
-          using React.js.
+          using ReactJs.
         </span>
         <a href="#home" onClick={() => onRefClick(homeRef)} aria-label="Go to the top of the page">
           <img className="go-to-top" src="./images/top.png" alt="html"></img>

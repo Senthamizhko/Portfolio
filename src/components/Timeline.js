@@ -10,7 +10,7 @@ const timelineData = [
     icon: "./images/gracenote.png",
     category: {
       tag: "Current Job",
-      color: "#018f69",
+      color: "#666",
     },
     link: {
       url: "https://www.gracenote.com/sports/2020-summer-games/",
@@ -25,7 +25,7 @@ const timelineData = [
     icon: "./images/kbc.png",
     category: {
       tag: "Onsite",
-      color: "#018f69",
+      color: "#666",
     },
     link: {
       url: "https://www.kbc.com/en/working-at-kbc.html",
@@ -40,7 +40,7 @@ const timelineData = [
     icon: "./images/cognizant.png",
     category: {
       tag: "First job",
-      color: "#018f69",
+      color: "#666",
     },
     // link: {
     //   url: "www.linkedin.com/in/senthamizhko-arivannal",
@@ -54,7 +54,7 @@ const timelineData = [
     date: "April 2014",
     category: {
       tag: "College",
-      color: "#1DA1F2",
+      color: "#666",
     },
     link: {
       url: "https://twitter.com/senthamizhko",
@@ -68,7 +68,7 @@ const timelineData = [
     date: "March 2010",
     category: {
       tag: "Education",
-      color: "#e17b77",
+      color: "#666",
     },
 
     link: {
@@ -81,7 +81,7 @@ const timelineData = [
     date: "September 03 1992",
     category: {
       tag: "Birth",
-      color: "#FFDB14",
+      color: "#666",
     },
 
     link: {
