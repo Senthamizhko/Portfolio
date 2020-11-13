@@ -10,7 +10,7 @@ section h1 {
     font-size: 2.5rem;
   }
   section h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -23,16 +23,18 @@ section h1 {
   /* height: 111vh; */
   justify-content: center;
   align-items: center;
+  padding-bottom: 335px;
   color: white;
 }
 .about-section {
   color: white;
   display: flex;
-  padding-top: 335px;
+  /* padding-top: 335px; */
   flex-direction: column;
   justify-content: center;
   text-align: center;
   /* height: 100vh; */
+  min-height: 100vh;
   scroll-snap-align: center;
 }
 .timeline-section {
@@ -45,28 +47,65 @@ section h1 {
   padding-top: 70px;
   justify-content: center;
 }
-
+.project-section1 {
+  width: 95%;
+    margin: 0 auto;
+    padding-top: 250px;
+    max-width: 1280px;
+    min-height: 100vh;
+}
 .project-section {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
   }
+
+
   .project1, .project2{
       width: 400px;
-      height: auto;
+      height: 400px;
       background: white;
       border-radius: 12px;
+      color: black;
+      padding: 0 10px;
   }
   .project1-header, .project2-header {
       padding: 25px;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid rgba(0,0,0,0.16);
     align-items: center;
   }
   .project-image {
       width: 90px;
       height: auto;
+  }
+  .project-image1 {
+    width: 45px;
+    height: auto;
+}
+
+  .project1-list {
+    text-align: left;
+    padding: 20px;
+    line-height: 1.5;
+  }
+  @media only screen and (max-width: 699px) {
+    .project-section1 {
+        padding-top: 60px;
+    }
+    .project-section {
+      flex-direction: column;
+    }
+    .project1, .project2{
+      width: 320px;
+      height: auto;
+      background: white;
+      border-radius: 12px;
+      color: black;
+  }
   }
 
 .countries-section {
@@ -172,7 +211,7 @@ body {
   background-size: 400% 400%;
   /* color: black; */
   animation: gradient 10s ease infinite;
-  color: white;
+  /* color: white; */
   /* color: #505050;
     font-family: 'Louis George Cafe', sans-serif;
     font-size: 16px;
@@ -361,7 +400,7 @@ input:checked + .slider:before {
 }
 
 
-li:first-child {
+ul > li:first-child {
   position: absolute;
   left: -10px;
   top: -13px;
@@ -401,6 +440,7 @@ li img:first-child {
   height: 50px;
   position: fixed;
   bottom: 0;
+  display: block;
   right: 20px;
 }
 
@@ -532,11 +572,12 @@ tr:last-child {
 
 .about-content {
   font-size: 21px;
-  line-height: 1.7;
+  line-height: 1.7;   
+   color: #e2e5e9db;
   /* letter-spacing: -.2px; */
   text-align: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .about-header {
   /* text-align: left; */
@@ -584,6 +625,7 @@ tr:last-child {
 
   .about-section {
     /* height: 210vh; */
+    padding-top: 60px;
   }
   .world {
     width: 90%;
@@ -595,7 +637,9 @@ tr:last-child {
 .about-desc {
   font-weight: bold;
   font-style: italic;
+  color: white;
 }
+
 
 
 /* .add {

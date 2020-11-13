@@ -4,9 +4,10 @@ import "./TimelineStyle.css";
 const timelineData = [
   {
       title: "Senior software engineer",
+      title1: "Gracenote Sports | Netherlands",
     text:
-      "Working as a Senior software engineer for Gracenote sports in Utrecht, Netherlands",
-    date: "June 2019 - Present",
+      "Widgets and web development using HTML, CSS, React, nodeJS. Provides fully hosted multisports application including live scoring, schedules, standings, results and also developed Tokyo olympics widgets like medal tables, athlete profile, brackets etc.",
+    date: "March 2019 - Present",
     icon: "./images/gracenote.png",
     category: {
       tag: "Current Job",
@@ -20,11 +21,12 @@ const timelineData = [
   {
 
     title: "Software engineer",
-    text: "Worked for Belgium Client- KBC bank in Belgium",
-    date: "May 05 2017",
+    title1: "KBC bank | Belgium",
+    text: "Responsible for development, maintenance and implementation of Backoffice and batch applications in Banking and Insurance domain.",
+    date: "May 2017 - February 2019",
     icon: "./images/kbc.png",
     category: {
-      tag: "Onsite",
+      tag: "Client",
       color: "#666",
     },
     link: {
@@ -33,61 +35,64 @@ const timelineData = [
     },
   },
   {
-    title: "Programmer Analyst/Associate",
+    title: "Associate",
+    title1: "Cognizant | India",
     text:
-      "Started working in Cognizant technology solution as a Programmer Analyst",
-    date: "July 31st 2014",
+      "Responsible for development of real time web applications using HTML, CSS, Javascript and also worked on backend services using Mainframe",
+    date: "July 2014 - February 2019",
     icon: "./images/cognizant.png",
     category: {
       tag: "First job",
       color: "#666",
     },
-    // link: {
-    //   url: "www.linkedin.com/in/senthamizhko-arivannal",
-    //   text: "Check it out here",
-    // },
+    link: {
+      url: "https://careers.cognizant.com/nl/en",
+      text: "Check it out here",
+    },
   },
   {
-    title: "Student",
+    title: "Bachelor of engineering",
+    title1: "Chennai, India",
     text:
       "Studied Electronics and communication engineering from Sree sastha institute of engineering and technology",
-    date: "April 2014",
+    date: "August 2010 - April 2014",
     category: {
       tag: "College",
       color: "#666",
     },
-    link: {
-      url: "https://twitter.com/senthamizhko",
-      text: "See profile",
-    },
+    // link: {
+    //   url: "https://twitter.com/senthamizhko",
+    //   text: "See profile",
+    // },
   },
   {
 
-    title: "Student",
-    text: "Completed my schooling from St.pauls matric hr sec school",
+    title: "High school",
+    title1: "St.pauls | Vaniyambadi, India",
     date: "March 2010",
     category: {
-      tag: "Education",
+      tag: "School",
       color: "#666",
     },
 
-    link: {
-      url: "https://www.facebook.com/senthamizhko",
-      text: "See profile",
-    },
+    // link: {
+    //   url: "https://www.facebook.com/senthamizhko",
+    //   text: "See profile",
+    // },
   },
   {
-    text: "Born",
+    title: "Born",
+    title1: "Vaniyambadi, India",
     date: "September 03 1992",
     category: {
       tag: "Birth",
       color: "#666",
     },
 
-    link: {
-      url: "https://www.facebook.com/senthamizhko",
-      text: "See profile",
-    },
+    // link: {
+    //   url: "https://www.facebook.com/senthamizhko",
+    //   text: "See profile",
+    // },
   },
 ];
 
@@ -100,6 +105,7 @@ const TimelineItem = ({ data, index }) => (
       <time>{data.date}</time>
 
       <h2 className="title1">{data.title}</h2>
+      <h4 className="title1">{data.title1}</h4>
       <p className="text">
           {
               <>

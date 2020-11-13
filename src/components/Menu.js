@@ -40,7 +40,7 @@ const StyledMenu = styled.nav`
   }
 `
 
-const Menu = ({ open, setOpen, onRefClick, homeRef, aboutRef, timelineRef, projectsRef, skillsRef, countriesRef}) => {
+const Menu = ({ open, setOpen, onRefClick, homeRef, aboutRef, timelineRef, skillsRef, countriesRef}) => {
   return (
     <StyledMenu open={open}>
     <a href="#aboutme" onClick={() => {onRefClick(homeRef); setOpen(!open); }}>
@@ -54,10 +54,6 @@ const Menu = ({ open, setOpen, onRefClick, homeRef, aboutRef, timelineRef, proje
       <a href="#about" onClick={() => {onRefClick(timelineRef); setOpen(!open); }}>
         <span role="img" aria-label="Timeline">⏱️</span>
         Timeline
-        </a>
-        <a href="#project" onClick={() => {onRefClick(projectsRef); setOpen(!open); }}>
-        <span role="img" aria-label="projects">🤹</span>
-        Projects
         </a>
       <a href="#service" onClick={() => {onRefClick(skillsRef); setOpen(!open); }}>
         <span role="img" aria-label="Skills">🤹</span>

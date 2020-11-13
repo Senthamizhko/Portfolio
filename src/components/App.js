@@ -13,7 +13,6 @@ const App = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const timelineRef = useRef(null);
-  const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const countriesRef = useRef(null);
   const onRefClick = (ref) => {
@@ -22,8 +21,8 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <MediaQuery maxWidth={699}>
-      <App1 onRefClick={onRefClick} homeRef={homeRef} aboutRef={aboutRef} timelineRef={timelineRef} projectsRef={projectsRef} skillsRef={skillsRef} countriesRef={countriesRef} />
+      <MediaQuery maxWidth={850}>
+      <App1 onRefClick={onRefClick} homeRef={homeRef} aboutRef={aboutRef} timelineRef={timelineRef} skillsRef={skillsRef} countriesRef={countriesRef} />
       </MediaQuery>
       <nav className="navbar">
         <ul>
@@ -37,9 +36,6 @@ const App = () => {
           </li>
           <li  onClick={() => onRefClick(timelineRef)}>
             <a href="#about">Timeline</a>
-          </li>
-          <li onClick={() => onRefClick(projectsRef)}>
-            <a  href="#project">Projects</a>
           </li>
           <li onClick={() => onRefClick(skillsRef)}>
             <a  href="#service">Skills</a>
@@ -154,25 +150,16 @@ const App = () => {
         <h2 className="about-header">About me</h2>
         <div className="about-content">
           I’m a <span className="about-desc add">Full stack developer</span> having
-          6 years of experience in software development, working as a{" "}
+          6 years of experience in software development, currently working as a{" "}
           <span className="about-desc">Senior software engineer</span> for
-          Gracenote sports based in Utrecht, Netherlands. <br></br> I develop
-          responsive(mobile/desktop/TV) sports widgets like(schedule day per
-          day, standings, match/ results detail, Athlete profile, Play by play
-          etc..) and pages/web applications for{" "}
-          <span className="about-desc">
-            Tokyo olympics 2020 and also many leagues like European leagues,
-            Premier leagues, NBA, NFL, PGA Tours and games like Soccer, Golf,
-            Basketball, Baseball, Cricket, Handball and almost every sports for
-            clients like NBC, CBC, Eurosports, Fifa, NOS.nl, Nu.nl, Telegraph{" "}
-          </span>
-          . <br></br> I studied electronics and communication engineering in
-          Chennai, India, worked in MNC's like Cognizant, KBC bank and traveled
-          Europe as much as I could. I’m interested in the whole visual part of
-          the web, its usability, performance and accessibility.
-          <br></br>I am an enthusiastic person who is always striving to learn
-          new things and willing to take up challenges which helps me to grow
+          Gracenote sports based in Utrecht, Netherlands. <br></br><MediaQuery maxWidth={699}> <br></br> </MediaQuery>
+          I'm passionate about bringing <span className="about-desc add">creativity</span> to through <span className="about-desc add">web development</span> solutions using<span className="about-desc add"> React</span> with <span className="about-desc add">nodeJS</span>. <br></br> I see each project as a new challenge that I face with<span className="about-desc add"> great enthusiasm </span>, getting fully involved to give my best, based on my experience and with a more transversal vision, without losing sight of the end user and looking for the most innovative solution 
+          <br></br> <MediaQuery maxWidth={699}> <br></br> </MediaQuery> I am an enthusiastic person who is always striving to learn
+          new things and willing to take up <span className="about-desc add">challenges </span>which helps me to grow
           professionally and to keep me updated in the IT industry.
+          <br></br> <MediaQuery maxWidth={699}> <br></br> </MediaQuery>
+          I studied <span className="about-desc add">electronics and communication engineering </span>in
+          Chennai, India, worked with Cognizant, KBC bank in my professional journey.
         </div>
       </section>
       <section ref={timelineRef} className="timeline-section">
@@ -180,32 +167,31 @@ const App = () => {
         <h2 className="about-header">Where I have been</h2>
         <Timeline />
       </section>
-      <section ref={projectsRef} >
-        <h1>Projects</h1>
+      {/* <section className="project-section1" ref={projectsRef} >
+        <h2 className="about-header">Projects</h2>
         <div className="project-section">
-          <ul><li>Gracenote</li><li>KBC</li></ul>
+          <div>
         <div className="project1">
           <h2 className="project1-header"> <img className="project-image" src="./images/gracenote.png" alt="html"></img>Gracenote Sports</h2>
-          <li>Developed
-          responsive sports widgets(mobile/tab/desktop) which provides sports functionalities like schedule day per
-          day, standings, match/ results detail, Athlete profile, Play by play
-          etc</li>
-          <li>Responsible for development of web application/pages for Tokyo olympics 2020 </li>
-          <li>Developed widgets to provide live scoring for major leagues like European leagues,
-            Premier leagues, NBA, NFL, PGA Tours and games like Soccer, Golf,
-            Basketball, Baseball, Cricket, Handball and almost every sports for
-            clients like NBC, CBC, Eurosports, Fifa, NOS.nl, Nu.nl, Telegraph</li>
-          <li>Developed a new set of responsive widgets, which are easy to implement and to
-customize. Our widgets are a fully hosted solution and can be implemented in any HTML page and used
-in all common environments</li>
+          <div className="project1-list">
+          <li>Developed responsive sports widgets(mobile/tab/desktop) and TV widgets</li>
+          <li>Development of widgets and web application/pages for Tokyo olympics 2020 </li>
+          <li>Developed widgets to provide live scoring for European leagues,
+            Premier leagues, NBA, NFL, PGA Tours, La liga.</li>
+            <li>Development of multisports widgets for Soccer, Golf,
+            Basketball, Baseball, Cricket, Handball and almost every sports</li>
+            </div>
+            </div>
         </div>
         <div className="project2">
-          <h2 className="project2-header"><img className="project-image" src="./images/kbc.png" alt="html"></img>KBC Bank</h2>
+          <h2 className="project2-header"><img className="project-image1" src="./images/kbc.png" alt="html"></img>KBC Bank</h2>
+          <div className="project1-list">
               <li> Responsible for development, maintenance and implementation of Backoffice and batch applications in Banking and Insurance domain.</li>
               <li>Developed customer end web applications using React and also worked on backend services using Mainframe</li>
+              </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section ref={skillsRef} className="skills-section">
         <Skills />
       </section>

@@ -22,9 +22,9 @@ h1 {
 }
 
 .text {
-    color: black;
+    color: rgba(0, 0, 0, 0.68);
 
-    font-family: Al Tarikh;
+    font-family: "Louis George Cafe", sans-serif;
 
     font-weight: bold;
 }
@@ -80,7 +80,7 @@ h1 {
     align-items: flex-end;
     padding: 15px;
     position: relative;
-    width: 400px;
+    width: 500px;
     max-width: 70%;
     text-align: right;
 }
@@ -135,7 +135,7 @@ h1 {
     font-size: 16px;
     line-height: 24px;
     margin: 15px 0;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .timeline-item-content a {
@@ -159,7 +159,7 @@ h1 {
     right: -40px;
     width: 20px;
     height: 20px;
-    z-index: 100;
+    z-index: 1;
 }
 
 .timeline-item:nth-child(even) .timeline-item-content .circle {
@@ -215,7 +215,7 @@ footer {
     left: 0;
     right: 0;
     text-align: center;
-    z-index: 999;
+    z-index: 1;
 }
 
 footer p {
@@ -233,7 +233,7 @@ footer a {
 
 .gracenote {
     width: auto;
-    height: 60px;
+    height: 35px;
 }
 
 
@@ -312,7 +312,7 @@ footer a {
     left: -40px;
     width: 20px;
     height: 20px;
-    z-index: 100;
+    z-index: 1;
 }
 .timeline-item:nth-child() .timeline-item-content {
     text-align: left;
@@ -388,7 +388,7 @@ right: auto;
 left: -40px;
 width: 20px;
 height: 20px;
-z-index: 100;
+z-index: 1;
 }
 .timeline-item:nth-child() .timeline-item-content {
 text-align: left;
