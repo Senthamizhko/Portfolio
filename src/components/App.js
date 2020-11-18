@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import Timeline from "./Timeline";
 import Skills from "./Skills";
 import App1 from "./Menu";
@@ -15,8 +15,11 @@ const App = () => {
   const timelineRef = useRef(null);
   const skillsRef = useRef(null);
   const countriesRef = useRef(null);
+  const [highlight, onHigh] = useState(false);
   const onRefClick = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    onHigh(ref);
+    // ref.current.style.background = '#2196f3';
   };
 
   return (
@@ -26,21 +29,24 @@ const App = () => {
       </MediaQuery>
       <nav className="navbar">
         <ul>
-          <li onClick={() => onRefClick(homeRef)}>
+          {/* <li onClick={() => onRefClick(homeRef)}>
             <a  href="#home">
               <img src="./images/home.png" alt="html"></img>
             </a>
+          </li> */}
+          <li onClick={() => onRefClick(homeRef)}  className={`${highlight === homeRef ? "navhigh" : null}`}>
+            <a href="#home">Home</a>
           </li>
-          <li onClick={() => onRefClick(aboutRef)} >
+          <li onClick={() => onRefClick(aboutRef)} className={`${highlight === aboutRef ? "navhigh" : null}`}>
             <a href="#aboutme">About</a>
           </li>
-          <li  onClick={() => onRefClick(timelineRef)}>
+          <li  onClick={() => onRefClick(timelineRef)} className={`${highlight === timelineRef ? "navhigh" : null}`}>
             <a href="#about">Timeline</a>
           </li>
-          <li onClick={() => onRefClick(skillsRef)}>
+          <li onClick={() => onRefClick(skillsRef)} className={`${highlight === skillsRef ? "navhigh" : null}`}>
             <a  href="#service">Skills</a>
           </li>
-          <li onClick={() => onRefClick(countriesRef)}>
+          <li onClick={() => onRefClick(countriesRef)} className={`${highlight === countriesRef ? "navhigh" : null}`}>
             <a  href="#contact">Countries</a>
           </li>
         </ul>

@@ -45,12 +45,13 @@
     list-style: none;
     width: 100%;
     justify-content: center;
+    align-items: center;
   }
   
   .navbar ul li {
     margin: 0 1rem;
-    padding: 1rem;
-    padding-top: 1.5rem;
+    padding: 10px;
+    /* padding-top: 1.5rem; */
     font-weight: bold;
   }
   
@@ -61,10 +62,18 @@
   }
   
   .navbar ul li:hover {
-    background: #23a6d5;
+    /* background: #23a6d5; */
     /* transform: scale(1.5); */
 
+    border: 1px solid white;
+    border-radius: 10px;
+
     cursor: pointer;
+  }
+  .navhigh {
+
+    border: 1px solid white;
+    border-radius: 10px;
   }
 
   @media only screen and (max-width: 850px) {

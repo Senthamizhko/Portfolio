@@ -400,11 +400,11 @@ input:checked + .slider:before {
 }
 
 
-ul > li:first-child {
+/* ul > li:first-child {
   position: absolute;
   left: -10px;
   top: -13px;
-}
+} */
 
 li img:first-child {
     width: 45px;
