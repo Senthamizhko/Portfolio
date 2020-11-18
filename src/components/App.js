@@ -123,7 +123,7 @@ const App = () => {
 
                 <div className="icon-cont">
                   <a
-                    href={"https://linkedin.com/in/senthamizhko-arivannal"}
+                    href="mailto:senthamizhko@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

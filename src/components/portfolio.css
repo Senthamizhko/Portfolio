@@ -66,6 +66,7 @@
     /* transform: scale(1.5); */
 
     border: 1px solid white;
+    border-color: #cf0652;
     border-radius: 10px;
 
     cursor: pointer;
@@ -74,6 +75,8 @@
 
     border: 1px solid white;
     border-radius: 10px;
+    border-color: #cf0652;
+    background-color: #cf0652;
   }
 
   @media only screen and (max-width: 850px) {
